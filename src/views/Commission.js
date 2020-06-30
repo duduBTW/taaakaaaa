@@ -1,5 +1,7 @@
 import React from "react";
-import { OwO, Title, Content, CoisaCinza } from "../views/idk";
+import { OwO, Title, Content, CoisaCinza } from "../styles/idk";
+import Conteudo from "../components/Portfolio/Conteudo";
+import { itens } from "./itens.js";
 
 export default function Commission() {
   return (
@@ -12,7 +14,9 @@ export default function Commission() {
           condimentum diam egestas eu. Praesent in diam justo.{" "}
         </Content>
       </OwO>
-      <CoisaCinza />
+      <CoisaCinza>
+        <Conteudo itens={itens.COMPLETA} selectedTag="COMPLETA" />
+      </CoisaCinza>
     </div>
   );
 }
