@@ -6,7 +6,7 @@ import { itens } from "./itens.js";
 
 import Modal from "../components/Modal";
 
-export default function Commission() {
+const Commission: React.FC = () => {
   const [open, setOpen] = React.useState(false);
   return (
     <div>
@@ -29,4 +29,6 @@ export default function Commission() {
       </CoisaCinza>
     </div>
   );
-}
+};
+
+export default Commission;

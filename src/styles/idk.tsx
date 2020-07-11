@@ -8,11 +8,17 @@ export const RobotoBold = createGlobalStyle`
   }
 `;
 
+interface YourProps {
+  active?: boolean;
+}
+
 export const CoisaCinza = styled.div`
   background-color: #efefef;
   padding-left: 75px;
   margin: 0px 52px;
   padding-bottom: 75px;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const OwO = styled.div`
@@ -49,7 +55,7 @@ export const PageTitles = styled.h1`
   margin: 0px;
 `;
 
-export const ButtonFilter = styled.button`
+export const ButtonFilter = styled.div<YourProps>`
   background-color: ${(props) => (props.active ? "#cb4850" : "#777777")};
   font-size: 20px;
   border-radius: 23px;
@@ -59,7 +65,10 @@ export const ButtonFilter = styled.button`
   border: none;
   color: white;
   cursor: pointer;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
   text-decoration: none;
   outline: none;
   &:hover {
@@ -69,6 +78,7 @@ export const ButtonFilter = styled.button`
 
 export const Gallery = styled.img`
   /* width: 246px; */
+  cursor: pointer;
   height: 246px;
   border-radius: 10px;
   margin: 12px;
